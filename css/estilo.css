@@ -15,41 +15,71 @@ body {
     color: #333;
 }
 
-/* Layout */
 /* Estilos para o cabeçalho */
 header {
-    background: linear-gradient(90deg, #ff5722, #ff9800); /* Gradiente laranja */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #ffffff; /* Cor de fundo sólida para testes */
     padding: 15px;
-    text-align: center;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: relative;
 }
 
+/* Estilo do logo */
+#logo {
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 2; /* Garante que a logo esteja sobre outros elementos */
+}
+
+#logo a {
+    color: #003366; /* Azul escuro */
+    text-decoration: none;
+    display: inline-block;
+    z-index: 2;
+    font-weight: 700;
+    font-size: 2.5em;
+    padding: 5px 10px;
+    margin: 5px;
+    border: 2px solid #ffffff; /* Contorno branco */
+    border-radius: 5px;
+}
+
+#logo a:hover {
+    color: #3399ff; /* Azul claro */
+}
+
+/* Estilo do título dentro do link */
 #logo h1 {
     font-size: 2.5em;
-    color: #fff; /* Cor da logo */
+    color: #003366; /* Azul escuro */
     margin: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
 }
 
 /* Estilos dos links de navegação */
 nav {
-    margin-top: 10px;
+    text-align: center;
+    z-index: 1;
+    position: relative;
 }
 
 nav a {
-    color: #00bcd4; /* Cor azul para contraste com a logo laranja */
+    color: #ffeb3b;
     padding: 8px 12px;
-    margin: 0 5px;
+    margin: 0 10px;
     border-radius: 5px;
     transition: background 0.3s, color 0.3s;
     font-weight: 500;
+    display: inline-block;
 }
 
 nav a:hover {
-    background: #fff; /* Fundo branco ao passar o mouse */
-    color: #00bcd4; /* Azul para manter o contraste */
+    background: #000000;
+    color: #ffffff;
     text-decoration: none;
 }
-
 
 main {
     display: flex;
@@ -92,20 +122,20 @@ footer {
     margin-top: 20px;
 }
 
-/* Formatação menu */
+/* Formatação de links globais */
 a {
     text-decoration: none;
-    color: #ff5722;
+    color: #ff5722; /* Cor laranja padrão */
     transition: color 0.3s;
 }
 
 a:link, a:visited {
-    color: #ff5722;
+    color: #ff5722; /* Cor laranja para links não visitados e visitados */
 }
 
 a:hover {
     text-decoration: underline;
-    color: #e64a19;
+    color: #e64a19; /* Cor alaranjada mais escura ao passar o mouse */
 }
 
 /* Formatações gerais */
